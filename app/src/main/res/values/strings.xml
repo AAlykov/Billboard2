@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Billboard</string>
+
+    <string name="ad_cat1">Объявления</string>
+    <string name="ad_my_ads">Мои объявления</string>
+    <string name="ad_cars">Автомобили</string>
+    <string name="ad_pc">Компьютеры</string>
+    <string name="ad_smarts">Смартфоны</string>
+    <string name="ad_dm">Бытовая техника</string>
+
+    <string name="ad_cat2">Аккаунт</string>
+    <string name="ac_sign_up">Регистрация</string>
+    <string name="ac_sign_in">Вход</string>
+    <string name="ac_sign_out">Выход</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="not_reg">Войдите или зарегистрируйтесь</string>
+
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_in_action">Войти</string>
+    <string name="sign_up_action">Зарегистрироваться</string>
+    <string name="forget_password">Забыли пароль?</string>
+
+    <string name="sign_up_error">Не удалось зарегистрироваться</string>
+    <string name="send_verification_email_error">Не удалсоь отправить email для подтверждения</string>
+    <string name="send_verification_email_done">На почту отправили письмо для подтверждения</string>
+    <string name="sign_in_error">Не удалось войти</string>
+
+    <!-- Sign dialog -->
+    <string name="link_done">Email успешно подключен к Google аккаунту</string>
+</resources>

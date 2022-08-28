@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1000800071428",
+    "project_id": "billboard-2430f",
+    "storage_bucket": "billboard-2430f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000800071428:android:56c4a79b47d668debaea51",
+        "android_client_info": {
+          "package_name": "com.tomsk.alykov.billboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000800071428-kmfa55j45o84epgs3oljpvrb2g3h4nmn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tomsk.alykov.billboard",
+            "certificate_hash": "2aa8422e9dd4dde0b16acc0e565990a9364ea6f2"
+          }
+        },
+        {
+          "client_id": "1000800071428-3q1u3v5ju2oh9jdvp9e3j9tq05tj62fl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvu7vezXHdOoogbs04utHW1i48FRDvD-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000800071428-3q1u3v5ju2oh9jdvp9e3j9tq05tj62fl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
