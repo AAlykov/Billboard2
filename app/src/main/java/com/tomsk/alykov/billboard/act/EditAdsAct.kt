@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.tomsk.alykov.billboard.R
 import com.tomsk.alykov.billboard.databinding.ActivityEditAdsBinding
 import com.tomsk.alykov.billboard.dialogs.DialogSpinnerHelper
@@ -43,7 +44,20 @@ class EditAdsAct : AppCompatActivity() {
     //OnClicks
     fun onClickSelectCountry(view: View) {
         val listCountry = CityHelper.getAllCountries(this)
-        dialog.showSpinnerDialog(this, listCountry)
+        dialog.showSpinnerDialog(this, listCountry, rootElement.tvSelectCountry)
+
+        if (rootElement.tvSelectCity.text.toString() != getString(R.string.select_city)) {
+            rootElement.tvSelectCity.text = getString(R.string.select_city)
+        }
+    }
+
+    fun onClickSelectCity(view: View) {
+        val selectedCountry = rootElement.tvSelectCountry.text.toString()
+        if (selectedCountry != getString((R.string.select_country))) {
+            val listCity = CityHelper.getAllCities(selectedCountry, this)
+            dialog.showSpinnerDialog(this, listCity, rootElement.tvSelectCity)
+        } else Toast.makeText(this, "No country", Toast.LENGTH_LONG).show()
+
     }
 
 }
