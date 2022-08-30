@@ -12,8 +12,9 @@ import com.tomsk.alykov.billboard.utils.CityHelper
 class DialogSpinnerHelper {
     fun showSpinnerDialog(context:Context, list:ArrayList<String>) {
         val builder = AlertDialog.Builder(context)
+        val dialog = builder.create()
         val rootView = LayoutInflater.from(context).inflate(R.layout.spinner_layout, null)
-        val adapter = RcViewDialogSpinner()
+        val adapter = RcViewDialogSpinnerAdapter(context, dialog)
         val rcView = rootView.findViewById<RecyclerView>(R.id.rcSpView)
 
         //var searchView: SearchView = rootView.findViewById(R.id.sv1)
@@ -25,11 +26,13 @@ class DialogSpinnerHelper {
 
         setSearchViewListener(adapter, list, svView)
 
-        builder.setView(rootView)
-        builder.show()
+        dialog.setView(rootView)
+
+        dialog.show()
+        //builder.show()
     }
 
-    private fun setSearchViewListener(adapter: RcViewDialogSpinner, list: ArrayList<String>, svView: SearchView?) {
+    private fun setSearchViewListener(adapter: RcViewDialogSpinnerAdapter, list: ArrayList<String>, svView: SearchView?) {
         svView?.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
                return false

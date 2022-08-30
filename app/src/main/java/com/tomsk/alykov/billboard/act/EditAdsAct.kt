@@ -2,6 +2,7 @@ package com.tomsk.alykov.billboard.act
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import com.tomsk.alykov.billboard.R
 import com.tomsk.alykov.billboard.databinding.ActivityEditAdsBinding
@@ -10,20 +11,19 @@ import com.tomsk.alykov.billboard.utils.CityHelper
 
 class EditAdsAct : AppCompatActivity() {
 
-
-    private lateinit var rootElement: ActivityEditAdsBinding
-
+    lateinit var rootElement: ActivityEditAdsBinding
+    private val dialog = DialogSpinnerHelper()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         rootElement = ActivityEditAdsBinding.inflate(layoutInflater)
         val view = rootElement.root
         setContentView(view)
-        //setContentView(R.layout.activity_edit_ads)
+        init()
 
-        val listCountry = CityHelper.getAllCountries(this)
-        val dialog = DialogSpinnerHelper()
-        dialog.showSpinnerDialog(this, listCountry)
+
+
+        //setContentView(R.layout.activity_edit_ads)
 
         /*
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, CityHelper.getAllCountries(this))
@@ -34,7 +34,16 @@ class EditAdsAct : AppCompatActivity() {
         val spinner = rootElement.spinner
         val adapter2 = ArrayAdapter(this,android.R.layout.simple_spinner_item, cityNames)
         spinner.adapter = adapter2 */
+    }
 
+    private fun init() {
 
     }
+
+    //OnClicks
+    fun onClickSelectCountry(view: View) {
+        val listCountry = CityHelper.getAllCountries(this)
+        dialog.showSpinnerDialog(this, listCountry)
+    }
+
 }

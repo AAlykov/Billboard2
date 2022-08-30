@@ -31,25 +31,19 @@
 
             </androidx.viewpager2.widget.ViewPager2>
 
-            <SearchView
-                android:id="@+id/countrySearch"
+            <TextView
+                android:id="@+id/tv_select_country"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:gravity="center"
+                android:onClick="onClickSelectCountry"
+                android:padding="10dp"
+                android:text="@string/select_country"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-
-            <Spinner
-                android:id="@+id/spinner"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Spinner
-                android:id="@+id/spCountry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </ScrollView>
